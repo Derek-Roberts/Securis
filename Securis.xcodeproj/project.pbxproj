@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71EB32035518A008C6D10 /* AppDelegate.swift */; };
+		AFD71EB62035518A008C6D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71EB52035518A008C6D10 /* ViewController.swift */; };
+		AFD71EB92035518A008C6D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD71EB72035518A008C6D10 /* Main.storyboard */; };
+		AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFD71EBA2035518A008C6D10 /* Securis.xcdatamodeld */; };
+		AFD71EBE2035518A008C6D10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD71EBD2035518A008C6D10 /* Assets.xcassets */; };
+		AFD71EC12035518A008C6D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */; };
+		AFD71ECC2035518A008C6D10 /* SecurisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71ECB2035518A008C6D10 /* SecurisTests.swift */; };
+		AFD71ED72035518A008C6D10 /* SecurisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71ED62035518A008C6D10 /* SecurisUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFD71EC82035518A008C6D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFD71EA82035518A008C6D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFD71EAF2035518A008C6D10;
+			remoteInfo = Securis;
+		};
+		AFD71ED32035518A008C6D10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFD71EA82035518A008C6D10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFD71EAF2035518A008C6D10;
+			remoteInfo = Securis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFD71EB02035518A008C6D10 /* Securis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Securis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD71EB32035518A008C6D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFD71EB52035518A008C6D10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFD71EB82035518A008C6D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFD71EBB2035518A008C6D10 /* Securis.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Securis.xcdatamodel; sourceTree = "<group>"; };
+		AFD71EBD2035518A008C6D10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFD71EC02035518A008C6D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFD71EC22035518A008C6D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD71EC72035518A008C6D10 /* SecurisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD71ECB2035518A008C6D10 /* SecurisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurisTests.swift; sourceTree = "<group>"; };
+		AFD71ECD2035518A008C6D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD71ED22035518A008C6D10 /* SecurisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD71ED62035518A008C6D10 /* SecurisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurisUITests.swift; sourceTree = "<group>"; };
+		AFD71ED82035518A008C6D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFD71EAD2035518A008C6D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD71EC42035518A008C6D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD71ECF2035518A008C6D10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFD71EA72035518A008C6D10 = {
+			isa = PBXGroup;
+			children = (
+				AFD71EB22035518A008C6D10 /* Securis */,
+				AFD71ECA2035518A008C6D10 /* SecurisTests */,
+				AFD71ED52035518A008C6D10 /* SecurisUITests */,
+				AFD71EB12035518A008C6D10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFD71EB12035518A008C6D10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFD71EB02035518A008C6D10 /* Securis.app */,
+				AFD71EC72035518A008C6D10 /* SecurisTests.xctest */,
+				AFD71ED22035518A008C6D10 /* SecurisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFD71EB22035518A008C6D10 /* Securis */ = {
+			isa = PBXGroup;
+			children = (
+				AFD71EB32035518A008C6D10 /* AppDelegate.swift */,
+				AFD71EB52035518A008C6D10 /* ViewController.swift */,
+				AFD71EB72035518A008C6D10 /* Main.storyboard */,
+				AFD71EBD2035518A008C6D10 /* Assets.xcassets */,
+				AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */,
+				AFD71EC22035518A008C6D10 /* Info.plist */,
+				AFD71EBA2035518A008C6D10 /* Securis.xcdatamodeld */,
+			);
+			path = Securis;
+			sourceTree = "<group>";
+		};
+		AFD71ECA2035518A008C6D10 /* SecurisTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD71ECB2035518A008C6D10 /* SecurisTests.swift */,
+				AFD71ECD2035518A008C6D10 /* Info.plist */,
+			);
+			path = SecurisTests;
+			sourceTree = "<group>";
+		};
+		AFD71ED52035518A008C6D10 /* SecurisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD71ED62035518A008C6D10 /* SecurisUITests.swift */,
+				AFD71ED82035518A008C6D10 /* Info.plist */,
+			);
+			path = SecurisUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFD71EAF2035518A008C6D10 /* Securis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD71EDB2035518A008C6D10 /* Build configuration list for PBXNativeTarget "Securis" */;
+			buildPhases = (
+				AFD71EAC2035518A008C6D10 /* Sources */,
+				AFD71EAD2035518A008C6D10 /* Frameworks */,
+				AFD71EAE2035518A008C6D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Securis;
+			productName = Securis;
+			productReference = AFD71EB02035518A008C6D10 /* Securis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFD71EC62035518A008C6D10 /* SecurisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD71EDE2035518A008C6D10 /* Build configuration list for PBXNativeTarget "SecurisTests" */;
+			buildPhases = (
+				AFD71EC32035518A008C6D10 /* Sources */,
+				AFD71EC42035518A008C6D10 /* Frameworks */,
+				AFD71EC52035518A008C6D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFD71EC92035518A008C6D10 /* PBXTargetDependency */,
+			);
+			name = SecurisTests;
+			productName = SecurisTests;
+			productReference = AFD71EC72035518A008C6D10 /* SecurisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AFD71ED12035518A008C6D10 /* SecurisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD71EE12035518A008C6D10 /* Build configuration list for PBXNativeTarget "SecurisUITests" */;
+			buildPhases = (
+				AFD71ECE2035518A008C6D10 /* Sources */,
+				AFD71ECF2035518A008C6D10 /* Frameworks */,
+				AFD71ED02035518A008C6D10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFD71ED42035518A008C6D10 /* PBXTargetDependency */,
+			);
+			name = SecurisUITests;
+			productName = SecurisUITests;
+			productReference = AFD71ED22035518A008C6D10 /* SecurisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFD71EA82035518A008C6D10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Derek Roberts";
+				TargetAttributes = {
+					AFD71EAF2035518A008C6D10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					AFD71EC62035518A008C6D10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AFD71EAF2035518A008C6D10;
+					};
+					AFD71ED12035518A008C6D10 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AFD71EAF2035518A008C6D10;
+					};
+				};
+			};
+			buildConfigurationList = AFD71EAB2035518A008C6D10 /* Build configuration list for PBXProject "Securis" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFD71EA72035518A008C6D10;
+			productRefGroup = AFD71EB12035518A008C6D10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFD71EAF2035518A008C6D10 /* Securis */,
+				AFD71EC62035518A008C6D10 /* SecurisTests */,
+				AFD71ED12035518A008C6D10 /* SecurisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFD71EAE2035518A008C6D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD71EC12035518A008C6D10 /* LaunchScreen.storyboard in Resources */,
+				AFD71EBE2035518A008C6D10 /* Assets.xcassets in Resources */,
+				AFD71EB92035518A008C6D10 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD71EC52035518A008C6D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD71ED02035518A008C6D10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFD71EAC2035518A008C6D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD71EB62035518A008C6D10 /* ViewController.swift in Sources */,
+				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,
+				AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD71EC32035518A008C6D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD71ECC2035518A008C6D10 /* SecurisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD71ECE2035518A008C6D10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD71ED72035518A008C6D10 /* SecurisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFD71EC92035518A008C6D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFD71EAF2035518A008C6D10 /* Securis */;
+			targetProxy = AFD71EC82035518A008C6D10 /* PBXContainerItemProxy */;
+		};
+		AFD71ED42035518A008C6D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFD71EAF2035518A008C6D10 /* Securis */;
+			targetProxy = AFD71ED32035518A008C6D10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFD71EB72035518A008C6D10 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFD71EB82035518A008C6D10 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFD71EC02035518A008C6D10 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFD71ED92035518A008C6D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFD71EDA2035518A008C6D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFD71EDC2035518A008C6D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PLGYL6VQ9C;
+				INFOPLIST_FILE = Securis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capstone.Securis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFD71EDD2035518A008C6D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PLGYL6VQ9C;
+				INFOPLIST_FILE = Securis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capstone.Securis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AFD71EDF2035518A008C6D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PLGYL6VQ9C;
+				INFOPLIST_FILE = SecurisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capstone.SecurisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Securis.app/Securis";
+			};
+			name = Debug;
+		};
+		AFD71EE02035518A008C6D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PLGYL6VQ9C;
+				INFOPLIST_FILE = SecurisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capstone.SecurisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Securis.app/Securis";
+			};
+			name = Release;
+		};
+		AFD71EE22035518A008C6D10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PLGYL6VQ9C;
+				INFOPLIST_FILE = SecurisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capstone.SecurisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Securis;
+			};
+			name = Debug;
+		};
+		AFD71EE32035518A008C6D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PLGYL6VQ9C;
+				INFOPLIST_FILE = SecurisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Capstone.SecurisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Securis;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFD71EAB2035518A008C6D10 /* Build configuration list for PBXProject "Securis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD71ED92035518A008C6D10 /* Debug */,
+				AFD71EDA2035518A008C6D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD71EDB2035518A008C6D10 /* Build configuration list for PBXNativeTarget "Securis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD71EDC2035518A008C6D10 /* Debug */,
+				AFD71EDD2035518A008C6D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD71EDE2035518A008C6D10 /* Build configuration list for PBXNativeTarget "SecurisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD71EDF2035518A008C6D10 /* Debug */,
+				AFD71EE02035518A008C6D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD71EE12035518A008C6D10 /* Build configuration list for PBXNativeTarget "SecurisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD71EE22035518A008C6D10 /* Debug */,
+				AFD71EE32035518A008C6D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFD71EBA2035518A008C6D10 /* Securis.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFD71EBB2035518A008C6D10 /* Securis.xcdatamodel */,
+			);
+			currentVersion = AFD71EBB2035518A008C6D10 /* Securis.xcdatamodel */;
+			path = Securis.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AFD71EA82035518A008C6D10 /* Project object */;
+}
