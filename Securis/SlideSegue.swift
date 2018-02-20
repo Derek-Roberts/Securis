@@ -21,7 +21,7 @@ class SlideSegue: UIStoryboardSegue {
         toViewController.view.transform = CGAffineTransform(translationX: 512, y: 0)
         containerView?.addSubview(toViewController.view)
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: {
             toViewController.view.transform = CGAffineTransform.identity
         }, completion: { success in
             fromViewController.present(toViewController, animated: false, completion: nil)
@@ -40,7 +40,7 @@ class UnwindSlideSegue: UIStoryboardSegue {
         
         fromViewController.view.superview?.insertSubview(toViewController.view, at: 0)
         
-        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: {
             fromViewController.view.transform = CGAffineTransform(translationX: 512, y: 0)
         }, completion: { success in
             fromViewController.dismiss(animated: false, completion: nil)
