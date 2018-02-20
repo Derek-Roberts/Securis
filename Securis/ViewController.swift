@@ -23,3 +23,12 @@ class ViewController: UIViewController {
 
 }
 
+class LoginButton: UIButton {
+    override func didMoveToWindow() {
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.shadowColor = UIColor.darkGray.cgColor
+        self.layer.shadowRadius = 2
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
+}

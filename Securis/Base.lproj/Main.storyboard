@@ -32,7 +32,7 @@
                                 <color key="textColor" white="0.38207718985421318" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-1Z-0nU">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-1Z-0nU" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
                                 <rect key="frame" x="77" y="419" width="221" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -49,7 +49,7 @@
                                     <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OvC-Bj-htR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlX-10-eUz">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlX-10-eUz" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
                                 <rect key="frame" x="77" y="484" width="221" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,6 +73,36 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Sign Up-->
+        <scene sceneID="zw4-Mi-1nV">
+            <objects>
+                <viewController title="Sign Up" id="YYt-7X-VS7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UPw-nJ-SB1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WXX-iW-Xfm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ym5-Bg-uRC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="-188"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="2FB-vh-q7n">
+            <objects>
+                <viewController title="Sign In" id="fwK-oA-85g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ei4-XK-hSL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6Rs-YN-ysQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dal-rk-kch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="509"/>
+        </scene>
         <!--Home-->
         <scene sceneID="9qr-7s-wP5">
             <objects>
@@ -86,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aP1-ps-cAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="960" y="131"/>
+            <point key="canvasLocation" x="1823" y="134"/>
         </scene>
     </scenes>
 </document>
