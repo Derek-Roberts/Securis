@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF527AEA203CBDF1009A222B /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF527AE9203CBDF1009A222B /* SlideSegue.swift */; };
 		AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71EB32035518A008C6D10 /* AppDelegate.swift */; };
 		AFD71EB62035518A008C6D10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71EB52035518A008C6D10 /* ViewController.swift */; };
 		AFD71EB92035518A008C6D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD71EB72035518A008C6D10 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF527AE9203CBDF1009A222B /* SlideSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
 		AFD71EB02035518A008C6D10 /* Securis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Securis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD71EB32035518A008C6D10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD71EB52035518A008C6D10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				AFD71EB32035518A008C6D10 /* AppDelegate.swift */,
 				AFD71EB52035518A008C6D10 /* ViewController.swift */,
 				AFD71EB72035518A008C6D10 /* Main.storyboard */,
+				AF527AE9203CBDF1009A222B /* SlideSegue.swift */,
 				AFD71EBD2035518A008C6D10 /* Assets.xcassets */,
 				AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */,
 				AFD71EC22035518A008C6D10 /* Info.plist */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD71EB62035518A008C6D10 /* ViewController.swift in Sources */,
+				AF527AEA203CBDF1009A222B /* SlideSegue.swift in Sources */,
 				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,
 				AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */,
 			);
