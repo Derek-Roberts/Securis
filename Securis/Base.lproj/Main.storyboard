@@ -69,7 +69,7 @@
         <scene sceneID="zw4-Mi-1nV">
             <objects>
                 <viewController title="Sign Up" id="YYt-7X-VS7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UPw-nJ-SB1">
+                    <view key="view" contentMode="scaleToFill" id="UPw-nJ-SB1" customClass="GradientView" customModule="Securis" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -85,7 +85,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="WXX-iW-Xfm"/>
                     </view>
                 </viewController>
@@ -98,7 +97,7 @@
         <scene sceneID="2FB-vh-q7n">
             <objects>
                 <viewController title="Sign In" id="fwK-oA-85g" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ei4-XK-hSL">
+                    <view key="view" contentMode="scaleToFill" id="ei4-XK-hSL" customClass="GradientView" customModule="Securis" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -114,7 +113,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Rs-YN-ysQ"/>
                     </view>
                 </viewController>
