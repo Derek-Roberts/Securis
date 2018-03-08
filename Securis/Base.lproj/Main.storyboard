@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LGJ-Gq-UqE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View-->
+        <!--Initial View Controller-->
+        <scene sceneID="4MM-Di-uWE">
+            <objects>
+                <viewController id="LGJ-Gq-UqE" customClass="InitialViewController" customModule="Securis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vvA-XR-dYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bag-8q-iO8"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuView" animates="NO" id="YYa-rH-lAa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyt-ZS-nKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-710" y="134"/>
+        </scene>
+        <!--Menu View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login View" id="BYZ-38-t0r" customClass="ViewController" customModule="Securis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menu View" id="BYZ-38-t0r" customClass="MenuViewController" customModule="Securis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +48,7 @@
                                 <color key="textColor" white="0.38207718985421318" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-g2-FWg" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-g2-FWg" customClass="RoundedButton" customModule="Securis" customModuleProvider="target">
                                 <rect key="frame" x="45" y="542" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -44,7 +62,7 @@
                                     <segue destination="YYt-7X-VS7" kind="show" animates="NO" id="TUO-0D-6bv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-4V-otG" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-4V-otG" customClass="RoundedButton" customModule="Securis" customModuleProvider="target">
                                 <rect key="frame" x="45" y="462" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -82,12 +100,12 @@
         <!--Sign Up View-->
         <scene sceneID="zw4-Mi-1nV">
             <objects>
-                <viewController title="Sign Up View" id="YYt-7X-VS7" sceneMemberID="viewController">
+                <viewController title="Sign Up View" id="YYt-7X-VS7" customClass="SignUpViewController" customModule="Securis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPw-nJ-SB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-Ec-67s" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-Ec-67s" customClass="RoundedButton" customModule="Securis" customModuleProvider="target">
                                 <rect key="frame" x="45" y="462" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -98,7 +116,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So5-Yf-keT" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So5-Yf-keT" customClass="RoundedButton" customModule="Securis" customModuleProvider="target">
                                 <rect key="frame" x="45" y="542" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.25657171010971069" green="0.34784230589866638" blue="0.57649821043014526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -110,7 +128,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSs-ht-AWZ">
-                                <rect key="frame" x="16" y="20" width="172" height="25"/>
+                                <rect key="frame" x="16" y="59" width="172" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
@@ -122,6 +140,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="So5-Yf-keT" firstAttribute="leading" secondItem="WXX-iW-Xfm" secondAttribute="leading" constant="45" id="0u8-4P-ZIl"/>
                             <constraint firstItem="WXX-iW-Xfm" firstAttribute="bottom" secondItem="So5-Yf-keT" secondAttribute="bottom" constant="70" id="1kO-zT-4b1"/>
@@ -138,11 +157,56 @@
             </objects>
             <point key="canvasLocation" x="1041" y="536"/>
         </scene>
+        <!--Home View-->
+        <scene sceneID="dLW-8u-QHH">
+            <objects>
+                <tableViewController title="Home View" id="6Xh-S5-4oK" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hsl-zz-Mog">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="n0l-Xf-jRU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n0l-Xf-jRU" id="Z7i-WS-H1k">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Xh-S5-4oK" id="451-dT-19s"/>
+                            <outlet property="delegate" destination="6Xh-S5-4oK" id="hAO-5E-j7F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home View Controller" id="gdU-R5-3Q9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhz-I8-Ydj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2786" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xah-a5-cuG">
+            <objects>
+                <navigationController id="UHn-Bd-I2t" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tTt-Fy-tm4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Xh-S5-4oK" kind="relationship" relationship="rootViewController" id="WqE-xa-soM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsi-DV-BaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="134"/>
+        </scene>
         <!--Sign In View-->
         <scene sceneID="2FB-vh-q7n">
             <objects>
-                <viewController title="Sign In View" id="fwK-oA-85g" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ei4-XK-hSL" customClass="GradientView" customModule="Securis" customModuleProvider="target">
+                <viewController title="Sign In View" id="fwK-oA-85g" customClass="SignInViewController" customModule="Securis" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ei4-XK-hSL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -158,6 +222,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Rs-YN-ysQ"/>
                     </view>
                 </viewController>
@@ -165,21 +230,6 @@
                 <exit id="lbw-IG-xSS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1041" y="-220"/>
-        </scene>
-        <!--Home View-->
-        <scene sceneID="9qr-7s-wP5">
-            <objects>
-                <viewController title="Home View" id="rBi-KK-Hwa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JFl-wN-z67">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="hKu-VA-w8w"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aP1-ps-cAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2498" y="162"/>
         </scene>
     </scenes>
 </document>
