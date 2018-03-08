@@ -31,31 +31,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-g2-FWg" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
-                                <rect key="frame" x="45" y="547" width="284" height="50"/>
+                                <rect key="frame" x="45" y="542" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="npL-Va-Axi"/>
+                                    <constraint firstAttribute="height" constant="55" id="npL-Va-Axi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YYt-7X-VS7" kind="show" id="TUO-0D-6bv"/>
+                                    <segue destination="YYt-7X-VS7" kind="show" animates="NO" id="TUO-0D-6bv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-4V-otG" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
-                                <rect key="frame" x="45" y="472" width="284" height="50"/>
+                                <rect key="frame" x="45" y="462" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HEk-ZI-ZvC"/>
+                                    <constraint firstAttribute="height" constant="55" id="HEk-ZI-ZvC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fwK-oA-85g" kind="show" id="YXa-w9-6Zc"/>
+                                    <segue destination="fwK-oA-85g" kind="show" animates="NO" id="YXa-w9-6Zc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,10 +88,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-Ec-67s" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
-                                <rect key="frame" x="45" y="472" width="284" height="50"/>
+                                <rect key="frame" x="45" y="462" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.39177024360000001" green="0.78451400999999998" blue="0.9804247022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="N8w-fq-bHD"/>
+                                    <constraint firstAttribute="height" constant="55" id="N8w-fq-bHD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Sign Up">
@@ -99,10 +99,10 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So5-Yf-keT" customClass="LoginButton" customModule="Securis" customModuleProvider="target">
-                                <rect key="frame" x="45" y="547" width="284" height="50"/>
+                                <rect key="frame" x="45" y="542" width="284" height="55"/>
                                 <color key="backgroundColor" red="0.25657171010971069" green="0.34784230589866638" blue="0.57649821043014526" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JDt-mX-Lt2"/>
+                                    <constraint firstAttribute="height" constant="55" id="JDt-mX-Lt2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Sign Up With Facebook">

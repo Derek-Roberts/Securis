@@ -10,7 +10,9 @@ import UIKit
 import CoreData
 import Firebase
 
-let primaryColor = #colorLiteral(red: 0.1744626462, green: 0.7959344983, blue: 1, alpha: 1)
+/*let primaryColor = #colorLiteral(red: 0.1744626462, green: 0.7959344983, blue: 1, alpha: 1)
+let secondaryColor = #colorLiteral(red: 0.4567013383, green: 0.8760409951, blue: 1, alpha: 1)*/
+let primaryColor = #colorLiteral(red: 0.150639236, green: 0.7468389869, blue: 0.9504782557, alpha: 1)
 let secondaryColor = #colorLiteral(red: 0.4567013383, green: 0.8760409951, blue: 1, alpha: 1)
 
 @UIApplicationMain
