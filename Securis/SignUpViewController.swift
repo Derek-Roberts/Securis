@@ -29,5 +29,9 @@ class SignUpViewController: UIViewController {
             return .lightContent
         }
     }
-
+    
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
 }
