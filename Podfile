@@ -7,6 +7,9 @@ target 'Securis' do
 
   # Pods for Securis
   pod 'Firebase/Core'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Google'
+  pod 'FirebaseUI/Facebook'
 
   target 'SecurisTests' do
     inherit! :search_paths
