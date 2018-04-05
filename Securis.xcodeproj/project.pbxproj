@@ -27,6 +27,7 @@
 		AFD71EC12035518A008C6D10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */; };
 		AFD71ECC2035518A008C6D10 /* SecurisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71ECB2035518A008C6D10 /* SecurisTests.swift */; };
 		AFD71ED72035518A008C6D10 /* SecurisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71ED62035518A008C6D10 /* SecurisUITests.swift */; };
+		AFDDA779206F095500EF507A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDA778206F095500EF507A /* HomeViewController.swift */; };
 		D901CBBA8A10E14CB17A2425 /* Pods_Securis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C6CDB687A5B2110B83654D /* Pods_Securis.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		AFD71ED22035518A008C6D10 /* SecurisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD71ED62035518A008C6D10 /* SecurisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurisUITests.swift; sourceTree = "<group>"; };
 		AFD71ED82035518A008C6D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFDDA778206F095500EF507A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C600008282896CDC67D9668D /* Pods-SecurisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecurisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecurisTests/Pods-SecurisTests.release.xcconfig"; sourceTree = "<group>"; };
 		E64CC0C8AE607DE95BEF55A1 /* Pods-SecurisUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecurisUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecurisUITests/Pods-SecurisUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +165,7 @@
 				AF830C922051234C0011DBA8 /* MenuViewController.swift */,
 				AF830C90205120570011DBA8 /* SignInViewController.swift */,
 				AF830C8C20511C960011DBA8 /* SignUpViewController.swift */,
+				AFDDA778206F095500EF507A /* HomeViewController.swift */,
 				AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */,
 				AF830C8E20511F310011DBA8 /* ButtonClasses.swift */,
 				AF527AE9203CBDF1009A222B /* SlideSegue.swift */,
@@ -427,20 +430,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Securis/Pods-Securis-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -518,6 +513,7 @@
 				AF830C932051234C0011DBA8 /* MenuViewController.swift in Sources */,
 				AF830C95205124210011DBA8 /* InitialViewController.swift in Sources */,
 				AF830C91205120570011DBA8 /* SignInViewController.swift in Sources */,
+				AFDDA779206F095500EF507A /* HomeViewController.swift in Sources */,
 				AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */,
 				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,
 				AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */,

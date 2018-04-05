@@ -12,7 +12,7 @@ import UIKit
 class InitialViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         
     }
 
