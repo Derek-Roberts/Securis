@@ -8,6 +8,7 @@ target 'Securis' do
   # Pods for Securis
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
   #pod 'FirebaseUI/Auth'
   #pod 'FirebaseUI/Google'
   #pod 'FirebaseUI/Facebook'

@@ -14,6 +14,11 @@
 		AF527AEC203CDF28009A222B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF527AEB203CDF27009A222B /* GoogleService-Info.plist */; };
 		AF527AED203CDF28009A222B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF527AEB203CDF27009A222B /* GoogleService-Info.plist */; };
 		AF527AEE203CDF28009A222B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF527AEB203CDF27009A222B /* GoogleService-Info.plist */; };
+		AF772742207B64940094C48A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772741207B64940094C48A /* QuizViewController.swift */; };
+		AF772745207B69790094C48A /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772744207B69790094C48A /* Questions.swift */; };
+		AF772747207B6F2D0094C48A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772746207B6F2D0094C48A /* UserProfile.swift */; };
+		AF772749207B6FE60094C48A /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772748207B6FE60094C48A /* CategoryService.swift */; };
+		AF77274B207B70430094C48A /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77274A207B70430094C48A /* Categories.swift */; };
 		AF830C8D20511C960011DBA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C8C20511C960011DBA8 /* SignUpViewController.swift */; };
 		AF830C8F20511F310011DBA8 /* ButtonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C8E20511F310011DBA8 /* ButtonClasses.swift */; };
 		AF830C91205120570011DBA8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C90205120570011DBA8 /* SignInViewController.swift */; };
@@ -59,6 +64,11 @@
 		AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		AF527AE9203CBDF1009A222B /* SlideSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
 		AF527AEB203CDF27009A222B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF772741207B64940094C48A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		AF772744207B69790094C48A /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		AF772746207B6F2D0094C48A /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		AF772748207B6FE60094C48A /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		AF77274A207B70430094C48A /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		AF830C8C20511C960011DBA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AF830C8E20511F310011DBA8 /* ButtonClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClasses.swift; sourceTree = "<group>"; };
 		AF830C90205120570011DBA8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +144,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF772740207B62510094C48A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */,
+				AF830C8E20511F310011DBA8 /* ButtonClasses.swift */,
+				AF527AE9203CBDF1009A222B /* SlideSegue.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF772743207B69580094C48A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF772744207B69790094C48A /* Questions.swift */,
+				AF772746207B6F2D0094C48A /* UserProfile.swift */,
+				AF772748207B6FE60094C48A /* CategoryService.swift */,
+				AF77274A207B70430094C48A /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AFD71EA72035518A008C6D10 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +190,7 @@
 		AFD71EB22035518A008C6D10 /* Securis */ = {
 			isa = PBXGroup;
 			children = (
+				AF772743207B69580094C48A /* Model */,
 				AFD71EB32035518A008C6D10 /* AppDelegate.swift */,
 				AFD71EB52035518A008C6D10 /* ViewController.swift */,
 				AF830C94205124210011DBA8 /* InitialViewController.swift */,
@@ -166,10 +198,9 @@
 				AF830C90205120570011DBA8 /* SignInViewController.swift */,
 				AF830C8C20511C960011DBA8 /* SignUpViewController.swift */,
 				AFDDA778206F095500EF507A /* HomeViewController.swift */,
-				AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */,
-				AF830C8E20511F310011DBA8 /* ButtonClasses.swift */,
-				AF527AE9203CBDF1009A222B /* SlideSegue.swift */,
+				AF772740207B62510094C48A /* Supporting Files */,
 				AFD71EB72035518A008C6D10 /* Main.storyboard */,
+				AF772741207B64940094C48A /* QuizViewController.swift */,
 				AFD71EBD2035518A008C6D10 /* Assets.xcassets */,
 				AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */,
 				AFD71EC22035518A008C6D10 /* Info.plist */,
@@ -269,7 +300,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Derek Roberts";
 				TargetAttributes = {
 					AFD71EAF2035518A008C6D10 = {
@@ -432,12 +463,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Securis/Pods-Securis-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,12 +539,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF772745207B69790094C48A /* Questions.swift in Sources */,
+				AF77274B207B70430094C48A /* Categories.swift in Sources */,
 				AF830C8F20511F310011DBA8 /* ButtonClasses.swift in Sources */,
+				AF772747207B6F2D0094C48A /* UserProfile.swift in Sources */,
 				AF830C8D20511C960011DBA8 /* SignUpViewController.swift in Sources */,
 				AFD71EB62035518A008C6D10 /* ViewController.swift in Sources */,
+				AF772742207B64940094C48A /* QuizViewController.swift in Sources */,
 				AF527AEA203CBDF1009A222B /* SlideSegue.swift in Sources */,
 				AF830C932051234C0011DBA8 /* MenuViewController.swift in Sources */,
 				AF830C95205124210011DBA8 /* InitialViewController.swift in Sources */,
+				AF772749207B6FE60094C48A /* CategoryService.swift in Sources */,
 				AF830C91205120570011DBA8 /* SignInViewController.swift in Sources */,
 				AFDDA779206F095500EF507A /* HomeViewController.swift in Sources */,
 				AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */,
@@ -585,6 +623,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -592,6 +631,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -621,7 +661,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -642,6 +682,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -649,6 +690,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

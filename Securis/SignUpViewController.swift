@@ -39,9 +39,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
