@@ -23,7 +23,7 @@ import FirebaseDatabase
 }*/
 
 struct Question {
-    let id: Int
+//    let id: Int
     let question: String
     let answer: Int
     let o1: String
@@ -59,30 +59,23 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
                 // This will get entire dictionary from Firebase
                 if let categoryArray = snapData["categories"] as? [[String:Any]]{
                     for categoryObj in categoryArray.enumerated() {
-                        let name = categoryObj.element["name"] as? String
                         
+                        let name = categoryObj.element["name"] as? String
                         let newCategory = Category(name: name!, id: categoryObj.offset)
                         
-                        //var questionsArray = [Question]()
-                        
                         if let categoryQuestions = categoryObj.element["questions"] as? [[String:Any]] {
-                            //print(categoryQuestions)
-                            //print(categoryQuestions?.count)
                             for questionObj in categoryQuestions.enumerated() {
-                                let id = questionObj.element["id"] as? Int
                                 let q = questionObj.element["question"] as? String
                                 let ans = questionObj.element["answer"] as? Int
                                 let o1 = questionObj.element["o1"] as? String
                                 let o2 = questionObj.element["o2"] as? String
                                 let o3 = questionObj.element["o3"] as? String
                                 let o4 = questionObj.element["o4"] as? String
-                                //questionsArray.append(Question(id: id!, question: question!, answer: answer!, o1: o1!, o2: o2!, o3: o3!, o4: o4!))
-                                let newQuestion = Question(id: id!, question: q!, answer: ans!, o1: o1!, o2: o2!, o3: o3!, o4: o4!)
+                                let newQuestion = Question(question: q!, answer: ans!, o1: o1!, o2: o2!, o3: o3!, o4: o4!)
                                 newCategory.addQuestion(question: newQuestion)
                             }
                         }
                         
-                        //self.categories.append(Category(name: name!, id: categoryObj.offset, questions: questionsArray))
                         self.categories.append(newCategory)
                         self.tableView.reloadData()
                         
