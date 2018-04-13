@@ -19,6 +19,7 @@
 		AF772747207B6F2D0094C48A /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772746207B6F2D0094C48A /* UserProfile.swift */; };
 		AF772749207B6FE60094C48A /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772748207B6FE60094C48A /* CategoryService.swift */; };
 		AF77274B207B70430094C48A /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77274A207B70430094C48A /* Categories.swift */; };
+		AF77274D207C5B3F0094C48A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */; };
 		AF830C8D20511C960011DBA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C8C20511C960011DBA8 /* SignUpViewController.swift */; };
 		AF830C8F20511F310011DBA8 /* ButtonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C8E20511F310011DBA8 /* ButtonClasses.swift */; };
 		AF830C91205120570011DBA8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C90205120570011DBA8 /* SignInViewController.swift */; };
@@ -69,6 +70,7 @@
 		AF772746207B6F2D0094C48A /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		AF772748207B6FE60094C48A /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		AF77274A207B70430094C48A /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		AF830C8C20511C960011DBA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AF830C8E20511F310011DBA8 /* ButtonClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClasses.swift; sourceTree = "<group>"; };
 		AF830C90205120570011DBA8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				AFDDA778206F095500EF507A /* HomeViewController.swift */,
 				AF772740207B62510094C48A /* Supporting Files */,
 				AFD71EB72035518A008C6D10 /* Main.storyboard */,
+				AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */,
 				AF772741207B64940094C48A /* QuizViewController.swift */,
 				AFD71EBD2035518A008C6D10 /* Assets.xcassets */,
 				AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */,
@@ -555,6 +558,7 @@
 				AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */,
 				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,
 				AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */,
+				AF77274D207C5B3F0094C48A /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

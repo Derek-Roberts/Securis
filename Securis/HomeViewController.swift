@@ -16,49 +16,72 @@ struct Category {
     let id: Int
 }
 
-class HomeViewController:UIViewController {
+class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var categoryTable: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var ref:DatabaseReference?
     var categories = [Category]()
+    
+    var quizID:Int = 42
+    var quizTitle:String? = "TEST"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addHorizontalGradientLayer(leftColor: primaryColor, rightColor: secondaryColor)
         
+        
         // set the Firebase reference
         ref = Database.database().reference()
 
         ref?.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
             if let snapData = snapshot.value as? [String:Any] {
-                // This will get entire dictionary from your JSON.
+                // This will get entire dictionary from Firebase
                 if let categoryArray = snapData["categories"] as? [[String:Any]]{
                     for categoryObj in categoryArray.enumerated() {
                         let name = categoryObj.element["name"] as? String
                         self.categories.append(Category(name: name!, id: categoryObj.offset))
+                        self.tableView.reloadData()
                     }
                 }
             }
         })
         
-        // retrieve the categories
-        //ref?.child("Categories/Basic: 1").observeSingleEvent(of: .value, with: { (snapshot) in
-        /*ref?.child("Categories").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            // Code to execute when a child is added under Categories
-            // Take value from snapshot and add it to the categoryData array
-            //let category = snapshot.value as? String
-            //self.categoryData.append(category!)
-            
-            let value = snapshot.value as? NSDictionary
-            //let question = value?["01"] as? Int ?? 0
-            
-            //let category = value?["category"] as? String ?? ""
-            
-        })*/
+        tableView.dataSource = self
+        tableView.delegate = self
         
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")! as! CustomTableViewCell
+
+        let text = categories[indexPath.row].name
+        
+        cell.label.text = text
+        
+        return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toQuizView") {
+            let quizViewController = segue.destination as! QuizViewController
+            // Pass on the quizID and quizTitle
+            quizViewController.quizID = quizID
+            quizViewController.quizTitle = quizTitle
+        }
+    }
+
+    @IBAction func quizTest(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toQuizView", sender: self)
     }
     
     @IBAction func logout(_ sender: Any) {
@@ -66,3 +89,12 @@ class HomeViewController:UIViewController {
         self.dismiss(animated: false, completion: nil)
     }
 }
+
+
+
+/*if segue.destination is QuizViewController
+ {
+ let viewController = segue.destination as? QuizViewController
+ let quizID = sender as! Int
+ viewController?.quizID = quizID
+ }*/
