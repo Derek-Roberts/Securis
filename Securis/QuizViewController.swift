@@ -23,16 +23,21 @@ class QuizViewController: UIViewController {
     
     // Quiz ID and title from previous view
     var quizID:Int?
-    var quizTitle:String?
+    var category:Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = quizTitle
+        self.title = category?.name
         
-        print("Quiz ID: \(quizID)")
-        print("Quiz Title: \(quizTitle)")
-
+        let currentQuestion = category?.questions[0]
+        
+        self.questionLabel.text = currentQuestion?.question
+        self.option1.setTitle(currentQuestion?.o1, for: .normal)
+        self.option2.setTitle(currentQuestion?.o2, for: .normal)
+        self.option3.setTitle(currentQuestion?.o3, for: .normal)
+        self.option4.setTitle(currentQuestion?.o4, for: .normal)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -48,10 +53,8 @@ class QuizViewController: UIViewController {
             print("Option 2 Selected")
         } else if sender.tag == 3 {
             print("Option 3 Selected")
-        } else if sender.tag == 4 {
-            print("Option 4 Selected")
         } else {
-            print("Error: Unknown Option Selected")
+            print("Option 4 Selected")
         }
         
     }
