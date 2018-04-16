@@ -11,30 +11,11 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-/*struct Category {
-    let name: String
-    let id: Int
-    var questions = [Question]()
-    
-    mutating func addQuestion(question: Question) {
-        self.questions.append(question)
-    }
-    
-}*/
-
-struct Question {
-//    let id: Int
-    let question: String
-    let answer: Int
-    let o1: String
-    let o2: String
-    let o3: String
-    let o4: String
-}
-
-class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var leaderboardButton: UIButton!
     
     var ref:DatabaseReference?
     var categories = [Category]()
@@ -85,19 +66,6 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
             }
         })
         
-        /*ref?.child("courses").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let snapData = snapshot.value as? [String:Any] {
-                // This will get entire dictionary from Firebase
-                if let categoryArray = snapData["categories"] as? [[String:Any]]{
-                    for categoryObj in categoryArray.enumerated() {
-                        let name = categoryObj.element["name"] as? String
-                        self.categories.append(Category(name: name!, id: categoryObj.offset))
-                        self.tableView.reloadData()
-                    }
-                }
-            }
-        })*/
-        
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -140,12 +108,16 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
 
-    @IBAction func quizTest(_ sender: UIButton) {
+    /*@IBAction func quizTest(_ sender: UIButton) {
         self.performSegue(withIdentifier: "toQuizView", sender: self)
+    }*/
+    
+    @IBAction func goToProfileView(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toProfileView", sender: self)
     }
     
-    @IBAction func logout(_ sender: Any) {
-        try! Auth.auth().signOut()
-        self.dismiss(animated: false, completion: nil)
+    @IBAction func goToLeaderboardView(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toLeaderboardView", sender: self)
     }
+
 }
