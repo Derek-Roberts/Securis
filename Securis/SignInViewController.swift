@@ -29,12 +29,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        get {
-            return .lightContent
-        }
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         switch textField {

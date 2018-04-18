@@ -23,11 +23,5 @@ class InitialViewController: UIViewController {
         
         self.performSegue(withIdentifier: "toMenuView", sender: self)
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        get {
-            return .lightContent
-        }
-    }
 
 }
