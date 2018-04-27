@@ -15,7 +15,6 @@ class LeaderboardViewController: UIViewController {
         
         view.addHorizontalGradientLayer(leftColor: primaryColor, rightColor: secondaryColor)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

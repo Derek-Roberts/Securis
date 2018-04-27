@@ -10,6 +10,7 @@
 		11A5AFA72729D289F9A20953 /* Pods_SecurisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D1A06359DF3B32DBF7D80E /* Pods_SecurisUITests.framework */; };
 		54F16E00AE32CFEA2A2505F0 /* Pods_SecurisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127956CD13A24A84D3150669 /* Pods_SecurisTests.framework */; };
 		AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */; };
+		AF3C124C2092FC6D006F3429 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C124B2092FC6D006F3429 /* QuizResultsViewController.swift */; };
 		AF527AEA203CBDF1009A222B /* SlideSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF527AE9203CBDF1009A222B /* SlideSegue.swift */; };
 		AF527AEC203CDF28009A222B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF527AEB203CDF27009A222B /* GoogleService-Info.plist */; };
 		AF527AED203CDF28009A222B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF527AEB203CDF27009A222B /* GoogleService-Info.plist */; };
@@ -65,6 +66,7 @@
 		927A75898E4C0BEE90FEA70A /* Pods-Securis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Securis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Securis/Pods-Securis.debug.xcconfig"; sourceTree = "<group>"; };
 		97D1A06359DF3B32DBF7D80E /* Pods_SecurisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecurisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		AF3C124B2092FC6D006F3429 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
 		AF527AE9203CBDF1009A222B /* SlideSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideSegue.swift; sourceTree = "<group>"; };
 		AF527AEB203CDF27009A222B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF65EA19208153AF00E849C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				AF772740207B62510094C48A /* Supporting Files */,
 				AFD71EB72035518A008C6D10 /* Main.storyboard */,
 				AF65EA1B2082C04C00E849C1 /* LeaderboardViewController.swift */,
+				AF3C124B2092FC6D006F3429 /* QuizResultsViewController.swift */,
 				AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */,
 				AF772741207B64940094C48A /* QuizViewController.swift */,
 				AF65EA19208153AF00E849C1 /* ProfileViewController.swift */,
@@ -564,6 +567,7 @@
 				AFDDA779206F095500EF507A /* HomeViewController.swift in Sources */,
 				AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */,
 				AF65EA1C2082C04C00E849C1 /* LeaderboardViewController.swift in Sources */,
+				AF3C124C2092FC6D006F3429 /* QuizResultsViewController.swift in Sources */,
 				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,
 				AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */,
 				AF77274D207C5B3F0094C48A /* CategoryTableViewCell.swift in Sources */,
