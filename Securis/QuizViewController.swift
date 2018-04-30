@@ -24,6 +24,9 @@ class QuizViewController: UIViewController {
     var quizID:Int?
     var category:Category?
     
+    // UserAnswer array to pass onto the next view
+    var userAnswers = [UserAnswer]()
+    
     var questionNumber: Int = 0
     var score: Int = 0
     var selected: Int = 0
@@ -46,6 +49,8 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func optionSelected(_ sender: UIButton) {
+        let currentQuestion = category?.questions[questionNumber - 1]
+        addUserAnswer(questionID: questionNumber, questionObj: currentQuestion!, chosenAnswer: sender.tag)
         if sender.tag == selected {
             print("Correct!")
             score += 1
@@ -60,6 +65,9 @@ class QuizViewController: UIViewController {
             updateUI()
             /*let end = UIAlertController(title: "End", message: "The quiz is over", preferredStyle: .alert)
             present(end, animated: true, completion: nil)*/
+            
+            // TODO: Update database with user's answers
+            
             exitQuiz()
         }
     }
@@ -81,11 +89,41 @@ class QuizViewController: UIViewController {
         updateUI()
     }
     
+    func addUserAnswer(questionID: Int, questionObj: Question, chosenAnswer: Int) {
+        var answerString = "Nil"
+        switch questionObj.answer {
+        case 1: answerString = questionObj.o1
+        case 2: answerString = questionObj.o2
+        case 3: answerString = questionObj.o3
+        case 4: answerString = questionObj.o4
+        default: break
+        }
+        var chosenString = "Nil"
+        switch chosenAnswer {
+        case 1: chosenString = questionObj.o1
+        case 2: chosenString = questionObj.o2
+        case 3: chosenString = questionObj.o3
+        case 4: chosenString = questionObj.o4
+        default: break
+        }
+        let newUserAnswer = UserAnswer(questionNumber: questionID, question: questionObj.question, answer: answerString, chosen: chosenString)
+        userAnswers.append(newUserAnswer)
+    }
+    
     func updateUI() {
         let scoreString = "Score: \(score)"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: scoreString, style: .plain, target: self, action: nil)
         let progressChunk = (view.frame.size.width / CGFloat(totalQuestions))
         progressBar.frame.size.width += progressChunk
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toQuizResults") {
+            let quizResultsViewController = segue.destination as! QuizResultsViewController
+            // Pass on the category
+            quizResultsViewController.category = category
+            quizResultsViewController.userAnswers = userAnswers
+        }
     }
     
     func exitQuiz() {
