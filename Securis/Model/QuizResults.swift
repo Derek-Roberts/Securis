@@ -10,15 +10,19 @@ import Foundation
 import FirebaseDatabase
 
 class QuizResults {
-    let quizName: String
+    var quizName: String
     var answers = [UserAnswer]()
     var userAvgCorrect: Double
     var globalAvgCorrect: Double
     
-    init(quizName: String) {
-        self.quizName = quizName
+    init() {
+        self.quizName = "nil"
         self.userAvgCorrect = 0.0
         self.globalAvgCorrect = 0
+    }
+    
+    func setQuizName(name: String) {
+        self.quizName = name
     }
     
     func addAnswer(userAnswer: UserAnswer) {

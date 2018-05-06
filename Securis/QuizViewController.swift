@@ -27,6 +27,9 @@ class QuizViewController: UIViewController {
     // UserAnswer array to pass onto the next view
     var userAnswers = [UserAnswer]()
     
+    // QuizResults to pass onto the next view
+    var quizResults = QuizResults()
+    
     var questionNumber: Int = 0
     var score: Int = 0
     var selected: Int = 0
@@ -38,6 +41,8 @@ class QuizViewController: UIViewController {
         self.title = category?.name
         self.navigationItem.largeTitleDisplayMode = .never
         totalQuestions = (category?.questions.count)!
+        
+        quizResults.setQuizName(name: (category?.name)!)
         
         updateQuestion()
         updateUI()
@@ -51,6 +56,7 @@ class QuizViewController: UIViewController {
     @IBAction func optionSelected(_ sender: UIButton) {
         let currentQuestion = category?.questions[questionNumber - 1]
         addUserAnswer(questionID: questionNumber, questionObj: currentQuestion!, chosenAnswer: sender.tag)
+        
         if sender.tag == selected {
             print("Correct!")
             score += 1
@@ -65,6 +71,9 @@ class QuizViewController: UIViewController {
             updateUI()
             /*let end = UIAlertController(title: "End", message: "The quiz is over", preferredStyle: .alert)
             present(end, animated: true, completion: nil)*/
+            
+            let userAverage = Double(score) / Double(totalQuestions)
+            quizResults.setUserAvgCorrect(userAvgCorrect: userAverage)
             
             // TODO: Update database with user's answers
             
@@ -108,6 +117,7 @@ class QuizViewController: UIViewController {
         }
         let newUserAnswer = UserAnswer(questionNumber: questionID, question: questionObj.question, answer: answerString, chosen: chosenString)
         userAnswers.append(newUserAnswer)
+        quizResults.addAnswer(userAnswer: newUserAnswer)
     }
     
     func updateUI() {
@@ -120,9 +130,10 @@ class QuizViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toQuizResults") {
             let quizResultsViewController = segue.destination as! QuizResultsViewController
-            // Pass on the category
-            quizResultsViewController.category = category
-            quizResultsViewController.userAnswers = userAnswers
+            // Pass on the user's answers
+            //quizResultsViewController.userAnswers = userAnswers
+            //quizResultsViewController.categoryName = (category?.name)!
+            quizResultsViewController.quizResults = quizResults
         }
     }
     

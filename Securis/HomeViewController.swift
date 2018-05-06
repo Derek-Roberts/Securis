@@ -39,12 +39,12 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
             if let snapData = snapshot.value as? [String:Any] {
                 // This will get entire dictionary from Firebase
                 if let categoryArray = snapData["categories"] as? [[String:Any]]{
-                    for categoryObj in categoryArray.enumerated() {
+                    for (num, categoryObj) in categoryArray.enumerated() {
+                        let name = categoryObj["name"] as? String
+                        //print("Category \(num): \(name)")
+                        let newCategory = Category(name: name!, id: num)
                         
-                        let name = categoryObj.element["name"] as? String
-                        let newCategory = Category(name: name!, id: categoryObj.offset)
-                        
-                        if let categoryQuestions = categoryObj.element["questions"] as? [[String:Any]] {
+                        if let categoryQuestions = categoryObj["questions"] as? [[String:Any]] {
                             for questionObj in categoryQuestions.enumerated() {
                                 let q = questionObj.element["question"] as? String
                                 let ans = questionObj.element["answer"] as? Int
@@ -60,6 +60,26 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
                         self.categories.append(newCategory)
                         self.tableView.reloadData()
                         
+                        /*print("Category nubmer: \(categoryObj.element.count)")
+                         let name = categoryObj.element["name"] as? String
+                         let newCategory = Category(name: name!, id: categoryObj.offset)
+                         
+                         if let categoryQuestions = categoryObj.element["questions"] as? [[String:Any]] {
+                         for questionObj in categoryQuestions.enumerated() {
+                         let q = questionObj.element["question"] as? String
+                         let ans = questionObj.element["answer"] as? Int
+                         let o1 = questionObj.element["o1"] as? String
+                         let o2 = questionObj.element["o2"] as? String
+                         let o3 = questionObj.element["o3"] as? String
+                         let o4 = questionObj.element["o4"] as? String
+                         let newQuestion = Question(question: q!, answer: ans!, o1: o1!, o2: o2!, o3: o3!, o4: o4!)
+                         newCategory.addQuestion(question: newQuestion)
+                         }
+                         }
+                         
+                         self.categories.append(newCategory)
+                         self.tableView.reloadData()*/
+                        
                         
                     }
                 }
@@ -70,6 +90,19 @@ class HomeViewController:UIViewController, UITableViewDataSource, UITableViewDel
         tableView.delegate = self
         
     }
+    
+    /*internal func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Basic"
+        case 1:
+            return "Normal"
+        case 2:
+            return "Advanced"
+        default:
+            return "Section"
+        }
+    }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categories.count
