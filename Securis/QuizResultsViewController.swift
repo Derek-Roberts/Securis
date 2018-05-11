@@ -72,36 +72,57 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
         self.navigationController?.popToViewController(controller!, animated: true)
     }
     
-    func saveResults(quizResults: QuizResults, completion: @escaping ((_ success:Bool)->())) {
-        ref = Database.database().reference()
+    /*func saveResults(quizResults: QuizResults, completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("user_results/\(uid)")
+        let result = [quizResults.quizName: quizResults.userAvgCorrect] as [String:Double]
+        databaseRef.updateChildValues(result)
+        updateUserAverage()
 
-        // The key does not exist within the database
-        let key = ref.child("results").childByAutoId().key
-        let questionIDs: [Int] = Array(0...quizResults.answers.count-1)
-
-        // Get the new global average from a func: until then set as zero
-        let globalAverage = 0.0
-        
-        let result = ["quizName": quizResults.quizName,
-                    "questionIDS": questionIDs,
-                    "globalAverage": globalAverage] as [String : Any]
-        let childUpdates = ["/results/\(key)": result,
-                            "/user-results/\(uid)/\(key)/": result]
-        ref.updateChildValues(childUpdates)
-        
-        /*let userResultsObject = [
-            "quizName": quizResults.quizName,
-            ]*/
-        
-        //databaseRef.setValue(userResultsObject) { error, ref in
-        //    completion(error == nil)
-        //}
     }
+    
+    func updateUserAverage() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("user_results/\(uid)")
+        var osum = Double(0)
+        databaseRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let dict = snapshot.value as! [String:Double]
+            var sum = Double(0)
+            for item in dict { sum += item.value }
+            print(sum)
+            osum = sum
+        })
+        print("OUTSIDE SUM: \(osum)")
+    }*/
+    
+    func saveResults(quizResults: QuizResults, completion: @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("user_results/\(uid)")
+        databaseRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let dict = snapshot.value as! [String:Double]
+            var sum = Double(0)
+            for item in dict {
+                print("HERE Is the item: '\(item.key) : \(item.value)")
+                if item.key != "user_average" && item.key == quizResults.quizName {
+                    sum += quizResults.userAvgCorrect
+                } else {
+                    sum += item.value
+                }
+            }
+            let avg = sum/Double(dict.count)
+            let average = ["user_average": avg] as [String:Double]
+            databaseRef.updateChildValues(average)
+        })
+        print("Adding result")
+        let result = [quizResults.quizName: quizResults.userAvgCorrect] as [String:Double]
+        databaseRef.updateChildValues(result)
+        
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-}
+ }

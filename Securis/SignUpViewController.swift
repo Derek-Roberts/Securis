@@ -99,11 +99,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     func saveProfile(username:String, email: String, completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        let databaseRef = Database.database().reference().child("users/\(uid)")
         
         let userObject = [
             "username": username,
-            "email": email
+            "email": email,
             ] as [String:Any]
         
         databaseRef.setValue(userObject) { error, ref in

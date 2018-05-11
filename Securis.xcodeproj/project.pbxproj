@@ -26,6 +26,8 @@
 		AF772749207B6FE60094C48A /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF772748207B6FE60094C48A /* CategoryService.swift */; };
 		AF77274B207B70430094C48A /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77274A207B70430094C48A /* Categories.swift */; };
 		AF77274D207C5B3F0094C48A /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */; };
+		AF81350320A5B00A00422D89 /* ProfileQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81350220A5B00A00422D89 /* ProfileQuizCell.swift */; };
+		AF81350520A5BE1A00422D89 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF81350420A5BE1A00422D89 /* LeaderboardCell.swift */; };
 		AF830C8D20511C960011DBA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C8C20511C960011DBA8 /* SignUpViewController.swift */; };
 		AF830C8F20511F310011DBA8 /* ButtonClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C8E20511F310011DBA8 /* ButtonClasses.swift */; };
 		AF830C91205120570011DBA8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF830C90205120570011DBA8 /* SignInViewController.swift */; };
@@ -83,6 +85,8 @@
 		AF772748207B6FE60094C48A /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		AF77274A207B70430094C48A /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		AF81350220A5B00A00422D89 /* ProfileQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileQuizCell.swift; sourceTree = "<group>"; };
+		AF81350420A5BE1A00422D89 /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		AF830C8C20511C960011DBA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AF830C8E20511F310011DBA8 /* ButtonClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonClasses.swift; sourceTree = "<group>"; };
 		AF830C90205120570011DBA8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				AF65EA1B2082C04C00E849C1 /* LeaderboardViewController.swift */,
 				AF3C124B2092FC6D006F3429 /* QuizResultsViewController.swift */,
 				AF77274C207C5B3F0094C48A /* CategoryTableViewCell.swift */,
+				AF81350220A5B00A00422D89 /* ProfileQuizCell.swift */,
+				AF81350420A5BE1A00422D89 /* LeaderboardCell.swift */,
 				AF772741207B64940094C48A /* QuizViewController.swift */,
 				AF65EA19208153AF00E849C1 /* ProfileViewController.swift */,
 				AFD71EBD2035518A008C6D10 /* Assets.xcassets */,
@@ -571,6 +577,7 @@
 				AF65EA1A208153AF00E849C1 /* ProfileViewController.swift in Sources */,
 				AF772742207B64940094C48A /* QuizViewController.swift in Sources */,
 				AF527AEA203CBDF1009A222B /* SlideSegue.swift in Sources */,
+				AF81350520A5BE1A00422D89 /* LeaderboardCell.swift in Sources */,
 				AF830C932051234C0011DBA8 /* MenuViewController.swift in Sources */,
 				AF830C95205124210011DBA8 /* InitialViewController.swift in Sources */,
 				AF772749207B6FE60094C48A /* CategoryService.swift in Sources */,
@@ -578,6 +585,7 @@
 				AF830C91205120570011DBA8 /* SignInViewController.swift in Sources */,
 				AFDDA779206F095500EF507A /* HomeViewController.swift in Sources */,
 				AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */,
+				AF81350320A5B00A00422D89 /* ProfileQuizCell.swift in Sources */,
 				AF65EA1C2082C04C00E849C1 /* LeaderboardViewController.swift in Sources */,
 				AF3C124C2092FC6D006F3429 /* QuizResultsViewController.swift in Sources */,
 				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,

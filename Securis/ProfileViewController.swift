@@ -8,13 +8,25 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var tapToChangeProfileImageButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userTotalAverage: UILabel!
+    
+    struct UserResults {
+        var name: String?
+        var score = 0.0
+    }
+    
+    var ref:DatabaseReference!
+    var userAvg: Double!
+
+    var userResults = [UserResults]()
     
     var imagePicker: UIImagePickerController!
     
@@ -38,6 +50,47 @@ class ProfileViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("user_results/\(uid)")
+        databaseRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let dict = snapshot.value as! [String:Double]
+            for item in dict {
+                print("HERE Is the item: '\(item.key) : \(item.value)")
+                if item.key == "user_average" {
+                    print("Found average: \(item.value)")
+                    self.userAvg = item.value * 100
+                    self.userTotalAverage.text = String(format: "%.0f", self.userAvg) + "%"
+                } else {
+                    let newResult = UserResults(name: item.key, score: item.value)
+                    self.userResults.append(newResult)
+                    self.tableView.reloadData()
+                }
+            }
+            //databaseRef.updateChildValues(average)
+        })
+        //print("Adding result")
+        //let result = [quizResults.quizName: quizResults.userAvgCorrect] as [String:Double]
+        //databaseRef.updateChildValues(result)
+        
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return userResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "quizCell")! as! ProfileQuizTableViewCell
+        let name = userResults[indexPath.row].name
+        cell.quizName.text = name
+        let score = userResults[indexPath.row].score
+        cell.quizScore.text = String(format: "%.0f", score*100) + "%"
+        
+        
+        return cell
     }
     
     // Used for the tapToChangeProfileImageButton
