@@ -75,8 +75,6 @@ class QuizViewController: UIViewController {
             let userAverage = Double(score) / Double(totalQuestions)
             quizResults.setUserAvgCorrect(userAvgCorrect: userAverage)
             
-            // TODO: Update database with user's answers
-            
             exitQuiz()
         }
     }

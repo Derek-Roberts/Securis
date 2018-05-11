@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
         profileImage.isUserInteractionEnabled = true
         profileImage.addGestureRecognizer(imageTap)
-        profileImage.layer.cornerRadius = profileImage.bounds.height / 2
+        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
         profileImage.clipsToBounds = true
         
         imagePicker = UIImagePickerController()
@@ -37,6 +37,7 @@ class ProfileViewController: UIViewController {
         imagePicker.delegate = self
 
         // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
     }
     
     // Used for the tapToChangeProfileImageButton
@@ -60,7 +61,7 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func logout(_ sender: Any) {
+    @objc func logout() {
         try! Auth.auth().signOut()
         self.dismiss(animated: false, completion: nil)
     }

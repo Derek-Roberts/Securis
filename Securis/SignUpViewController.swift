@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
 
@@ -16,6 +17,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var dismissButton: UIButton!
+    
+    // Firebase database reference
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,20 +73,41 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             if error == nil && user != nil {
                 print("New user created!")
                 
+                // Add the username to the currentUser
                 let changeReq = Auth.auth().currentUser?.createProfileChangeRequest()
                 changeReq?.displayName = username
-                
                 changeReq?.commitChanges { error in
                     if error == nil {
                         print("User display name has been changed!")
-                        self.dismiss(animated: false, completion: nil)
+                        
+                        // Add the user to the User section of the realtime database
+                        self.saveProfile(username: username, email: email) { success in
+                            if success {
+                                self.dismiss(animated: false, completion: nil)
+                            }
+                        }
                     } else {
                         print("Error: \(error!.localizedDescription)")
                     }
                 }
+                
             } else {
                 print("Error: \(error!.localizedDescription)")
             }
+        }
+    }
+    
+    func saveProfile(username:String, email: String, completion: @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        
+        let userObject = [
+            "username": username,
+            "email": email
+            ] as [String:Any]
+        
+        databaseRef.setValue(userObject) { error, ref in
+            completion(error == nil)
         }
     }
     

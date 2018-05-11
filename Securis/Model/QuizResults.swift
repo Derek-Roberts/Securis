@@ -13,12 +13,10 @@ class QuizResults {
     var quizName: String
     var answers = [UserAnswer]()
     var userAvgCorrect: Double
-    var globalAvgCorrect: Double
     
     init() {
         self.quizName = "nil"
         self.userAvgCorrect = 0.0
-        self.globalAvgCorrect = 0
     }
     
     func setQuizName(name: String) {
@@ -32,10 +30,5 @@ class QuizResults {
     func setUserAvgCorrect(userAvgCorrect: Double) {
         self.userAvgCorrect = userAvgCorrect
     }
-    
-    /*func updateGlobalAvgCorrect() {
-        var ref:DatabaseReference?
-        
-    }*/
     
 }

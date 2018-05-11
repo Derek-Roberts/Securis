@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "159-trophy.png",
+      "filename" : "ProfileImage.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "159-trophy-1.png",
       "scale" : "2x"
     },
     {

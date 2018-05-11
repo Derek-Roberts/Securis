@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class QuizResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITabBarDelegate {
     
@@ -16,6 +17,9 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
     
     // QuizResults object from previous view
     var quizResults = QuizResults()
+    
+    // Get the Firebase database reference
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,7 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,8 +61,42 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func goHome(sender: UIButton) {
+        // Add the user to the User section of the realtime database
+        self.saveResults(quizResults: quizResults) { error in
+            if error {
+                // Need to add an alert that there was an issue saving to the database
+                print("Error saving results to database.")
+            }
+        }
         let controller = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 3]
         self.navigationController?.popToViewController(controller!, animated: true)
+    }
+    
+    func saveResults(quizResults: QuizResults, completion: @escaping ((_ success:Bool)->())) {
+        ref = Database.database().reference()
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+
+        // The key does not exist within the database
+        let key = ref.child("results").childByAutoId().key
+        let questionIDs: [Int] = Array(0...quizResults.answers.count-1)
+
+        // Get the new global average from a func: until then set as zero
+        let globalAverage = 0.0
+        
+        let result = ["quizName": quizResults.quizName,
+                    "questionIDS": questionIDs,
+                    "globalAverage": globalAverage] as [String : Any]
+        let childUpdates = ["/results/\(key)": result,
+                            "/user-results/\(uid)/\(key)/": result]
+        ref.updateChildValues(childUpdates)
+        
+        /*let userResultsObject = [
+            "quizName": quizResults.quizName,
+            ]*/
+        
+        //databaseRef.setValue(userResultsObject) { error, ref in
+        //    completion(error == nil)
+        //}
     }
 
     override func didReceiveMemoryWarning() {
