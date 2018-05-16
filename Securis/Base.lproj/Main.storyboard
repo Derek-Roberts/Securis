@@ -569,7 +569,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="502"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userIdentifier" rowHeight="95" id="1jB-Ow-A2O" customClass="LeaderboardTableViewCell" customModule="Securis" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="95" id="1jB-Ow-A2O" customClass="LeaderboardTableViewCell" customModule="Securis" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jB-Ow-A2O" id="Saw-Mc-rug">
@@ -618,6 +618,11 @@
                                                 <constraint firstItem="Aa4-t6-zFd" firstAttribute="leading" secondItem="Am8-hy-yHZ" secondAttribute="trailing" constant="8" id="u2e-ar-A6O"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="profileImage" destination="2k5-hq-eAu" id="tOI-IS-KXm"/>
+                                            <outlet property="score" destination="Aa4-t6-zFd" id="eFm-5O-QAB"/>
+                                            <outlet property="username" destination="lxj-gf-0Oq" id="8xK-0Q-daa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

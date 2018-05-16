@@ -96,27 +96,34 @@ class QuizResultsViewController: UIViewController, UITableViewDataSource, UITabl
     }*/
     
     func saveResults(quizResults: QuizResults, completion: @escaping ((_ success:Bool)->())) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Database.database().reference().child("user_results/\(uid)")
+        guard let userProfile = UserService.currentUserProfile else { return }
+        let databaseRef = Database.database().reference().child("user_results/\(userProfile.uid)")
         databaseRef.observeSingleEvent(of: .value, with: { (snapshot) in
             let dict = snapshot.value as! [String:Double]
             var sum = Double(0)
             for item in dict {
                 print("HERE Is the item: '\(item.key) : \(item.value)")
-                if item.key != "user_average" && item.key == quizResults.quizName {
+                if item.key == quizResults.quizName {
                     sum += quizResults.userAvgCorrect
-                } else {
+                }
+                else {
                     sum += item.value
                 }
             }
             let avg = sum/Double(dict.count)
-            let average = ["user_average": avg] as [String:Double]
-            databaseRef.updateChildValues(average)
+            let average = ["average": avg] as [String:Double]
+            let profileRef = Database.database().reference().child("users/profile/\(userProfile.uid)")
+            profileRef.updateChildValues(average)
         })
         print("Adding result")
         let result = [quizResults.quizName: quizResults.userAvgCorrect] as [String:Double]
         databaseRef.updateChildValues(result)
-        
+        /*let userObject = [
+            "username": userProfile.username,
+            "photoURL": userProfile.photoURL.absoluteString
+        ] as [String:Any]
+        databaseRef.updateChildValues(userObject)*/
+
     }
     
 

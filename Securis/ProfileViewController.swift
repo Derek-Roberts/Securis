@@ -35,7 +35,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         view.addHorizontalGradientLayer(leftColor: primaryColor, rightColor: secondaryColor)
         
-        nameLabel.text = Auth.auth().currentUser?.displayName
+        guard let userProfile = UserService.currentUserProfile else { return }
+        nameLabel.text = userProfile.username
+        ImageService.getImage(withURL: userProfile.photoURL) { image in
+            self.profileImage.image = image
+        }
         
         let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
         profileImage.isUserInteractionEnabled = true
@@ -51,28 +55,21 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(self.logout))
         
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Database.database().reference().child("user_results/\(uid)")
+        self.userTotalAverage.text = String(format: "%.0f", userProfile.average*100) + "%"
+        
+        let databaseRef = Database.database().reference().child("user_results/\(userProfile.uid)")
         databaseRef.observeSingleEvent(of: .value, with: { (snapshot) in
             let dict = snapshot.value as! [String:Double]
-            for item in dict {
-                print("HERE Is the item: '\(item.key) : \(item.value)")
-                if item.key == "user_average" {
-                    print("Found average: \(item.value)")
-                    self.userAvg = item.value * 100
-                    self.userTotalAverage.text = String(format: "%.0f", self.userAvg) + "%"
-                } else {
-                    let newResult = UserResults(name: item.key, score: item.value)
-                    self.userResults.append(newResult)
-                    self.tableView.reloadData()
-                }
+            
+            // Sort the dictionary
+            let dictTupleArray = dict.sorted{ $0.value > $1.value }
+            for (quiz,score) in dictTupleArray {
+                let newResult = UserResults(name: quiz, score: score)
+                self.userResults.append(newResult)
+                self.tableView.reloadData()
             }
-            //databaseRef.updateChildValues(average)
         })
-        //print("Adding result")
-        //let result = [quizResults.quizName: quizResults.userAvgCorrect] as [String:Double]
-        //databaseRef.updateChildValues(result)
-        
+
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -108,6 +105,41 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         // Open the Image Picker
         self.present(imagePicker, animated: true, completion: nil)
     }
+    
+    func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference().child("user/profile/\(uid)")
+        
+        guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
+        
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        storageRef.putData(imageData, metadata: metaData) { metaData, error in
+            if error == nil, metaData != nil {
+                if let url = metaData?.downloadURL() {
+                    completion(url)
+                } else {
+                    completion(nil)
+                }
+                // success!
+            } else {
+                // failed
+                completion(nil)
+            }
+        }
+    }
+    
+    func updateUserImage(profileImageURL:URL, completion: @escaping ((_ success:Bool)->())) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+        let userObject = ["photoURL": profileImageURL.absoluteString] as [String:Any]
+        
+        databaseRef.updateChildValues(userObject) { error, ref in
+            completion(error == nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -131,6 +163,25 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             self.profileImage.image = pickedImage
+            self.uploadProfileImage(pickedImage) { url in
+                if url != nil {
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.photoURL = url
+                    changeRequest?.commitChanges { error in
+                        if error == nil {
+                            self.updateUserImage(profileImageURL: url!) { success in
+                                if success {
+                                    print("User profile image has been changed!")
+                                }
+                            }
+                        } else {
+                            print("Error: \(error!.localizedDescription)")
+                        }
+                    }
+                } else {
+                    // Error unable to upload profile image
+                }
+            }
         }
         
         picker.dismiss(animated: true, completion: nil)

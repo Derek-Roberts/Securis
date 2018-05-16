@@ -10,6 +10,8 @@
 		11A5AFA72729D289F9A20953 /* Pods_SecurisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D1A06359DF3B32DBF7D80E /* Pods_SecurisUITests.framework */; };
 		54F16E00AE32CFEA2A2505F0 /* Pods_SecurisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 127956CD13A24A84D3150669 /* Pods_SecurisTests.framework */; };
 		AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */; };
+		AF36554C20AC18E70097AB2D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36554B20AC18E70097AB2D /* ImageService.swift */; };
+		AF36554E20AC199A0097AB2D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36554D20AC199A0097AB2D /* UserService.swift */; };
 		AF3C124C2092FC6D006F3429 /* QuizResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C124B2092FC6D006F3429 /* QuizResultsViewController.swift */; };
 		AF3C124E2095423D006F3429 /* UserAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C124D2095423D006F3429 /* UserAnswer.swift */; };
 		AF3C1250209543C7006F3429 /* QuizResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C124F209543C7006F3429 /* QuizResults.swift */; };
@@ -71,6 +73,8 @@
 		927A75898E4C0BEE90FEA70A /* Pods-Securis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Securis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Securis/Pods-Securis.debug.xcconfig"; sourceTree = "<group>"; };
 		97D1A06359DF3B32DBF7D80E /* Pods_SecurisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecurisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF18FC5A2050B63C007F2C91 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		AF36554B20AC18E70097AB2D /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		AF36554D20AC199A0097AB2D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		AF3C124B2092FC6D006F3429 /* QuizResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewController.swift; sourceTree = "<group>"; };
 		AF3C124D2095423D006F3429 /* UserAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswer.swift; sourceTree = "<group>"; };
 		AF3C124F209543C7006F3429 /* QuizResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResults.swift; sourceTree = "<group>"; };
@@ -162,6 +166,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AF36554F20AC19A10097AB2D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF36554B20AC18E70097AB2D /* ImageService.swift */,
+				AF36554D20AC199A0097AB2D /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AF772740207B62510094C48A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +241,7 @@
 				AF81350420A5BE1A00422D89 /* LeaderboardCell.swift */,
 				AF772741207B64940094C48A /* QuizViewController.swift */,
 				AF65EA19208153AF00E849C1 /* ProfileViewController.swift */,
+				AF36554F20AC19A10097AB2D /* Services */,
 				AFD71EBD2035518A008C6D10 /* Assets.xcassets */,
 				AFD71EBF2035518A008C6D10 /* LaunchScreen.storyboard */,
 				AFD71EC22035518A008C6D10 /* Info.plist */,
@@ -568,6 +582,7 @@
 			files = (
 				AF772745207B69790094C48A /* Questions.swift in Sources */,
 				AF3C125220969051006F3429 /* ResultsTableViewCell.swift in Sources */,
+				AF36554E20AC199A0097AB2D /* UserService.swift in Sources */,
 				AF77274B207B70430094C48A /* Categories.swift in Sources */,
 				AF830C8F20511F310011DBA8 /* ButtonClasses.swift in Sources */,
 				AF772747207B6F2D0094C48A /* UserProfile.swift in Sources */,
@@ -587,6 +602,7 @@
 				AF18FC5B2050B63C007F2C91 /* HelperExtensions.swift in Sources */,
 				AF81350320A5B00A00422D89 /* ProfileQuizCell.swift in Sources */,
 				AF65EA1C2082C04C00E849C1 /* LeaderboardViewController.swift in Sources */,
+				AF36554C20AC18E70097AB2D /* ImageService.swift in Sources */,
 				AF3C124C2092FC6D006F3429 /* QuizResultsViewController.swift in Sources */,
 				AFD71EBC2035518A008C6D10 /* Securis.xcdatamodeld in Sources */,
 				AFD71EB42035518A008C6D10 /* AppDelegate.swift in Sources */,

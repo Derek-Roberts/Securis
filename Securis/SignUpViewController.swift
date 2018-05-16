@@ -81,7 +81,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                         print("User display name has been changed!")
                         
                         // Add the user to the User section of the realtime database
-                        self.saveProfile(username: username, email: email) { success in
+                        self.saveProfile(username: username) { success in
                             if success {
                                 self.dismiss(animated: false, completion: nil)
                             }
@@ -97,14 +97,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func saveProfile(username:String, email: String, completion: @escaping ((_ success:Bool)->())) {
+    func saveProfile(username:String, completion: @escaping ((_ success:Bool)->())) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Database.database().reference().child("users/\(uid)")
+        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
         
-        let userObject = [
-            "username": username,
-            "email": email,
-            ] as [String:Any]
+        let userObject = ["username": username] as [String:Any]
         
         databaseRef.setValue(userObject) { error, ref in
             completion(error == nil)
